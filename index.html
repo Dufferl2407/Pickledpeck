@@ -348,13 +348,14 @@ i.boticon:hover
 
 function animation(tileNum) {
 var $tile = $('#tile' + tileNum + "-1");
-$tile.animate({left: $('#tile' + tileNum).offset().left}, 1000);
-$tile.removeClass("offscreen");
+$tile.addClass("animating");
+$tile.animate({left: $('#tile' + tileNum).offset().left}, 1000, function(){$tile.removeClass("offscreen"); $tile.removeClass("animating");});
 }
 
 function animation2(tileNum) {
 var $tile = $('#tile' + tileNum + "-1");
-$tile.animate({left: '100vw'}, 1000,function(){$tile.addClass("offscreen");})}
+$tile.addClass("animating");
+$tile.animate({left: '100vw'}, 1000,function(){$tile.addClass("offscreen"); $tile.removeClass("animating");})}
 
 function tileSlider(tileNum, name) 
 {
@@ -368,7 +369,8 @@ function tileSlider(tileNum, name)
 			var converter = window.innerWidth/window.innerHeight; 
 			var sideLocation = sliderSpot * converter;
 			
-			if($tile.hasClass("offscreen")){$tile.css({'left': '100vw'});}
+			if($tile.hasClass("animating")){}
+			else if($tile.hasClass("offscreen")){$tile.css({'left': '100vw'});}
 			else if (tileNum%2 == 0){$tile.css({'left': -sideLocation});}
 			else{$tile.css({'left': sideLocation});}
 		});
