@@ -116,6 +116,11 @@ i.boticon:hover
   color: rgb(255,173,52);
 }
 
+i.boticon2:hover 
+{
+  color: white;
+}
+
 #tile1
 {
 	background:white;
@@ -208,6 +213,19 @@ i.boticon:hover
 	transform: translate(-80%, -49%);
 }
 
+#aboutme
+{
+	font-family: 'Trebuchet MS';
+	font-size: 22px;
+	position: absolute;
+	left: 20vw;
+	width:80vw;
+	height:85vh;
+	top: 5vh;
+	color:rgb(255,173,52);
+	overflow-y:scroll;
+}
+
 #title
 {
 	font-family: 'Advent Pro';
@@ -239,6 +257,10 @@ i.boticon:hover
 	
 }
 
+p.abt{margin-right: 5vw;}
+
+li{margin-right: 5vw;}
+
 .videoWrapper{position: absolute; left:17vw; top:8vh;}
 
 /* Create a Parallax Effect */
@@ -265,6 +287,7 @@ i.boticon:hover
     background-attachment: scroll;
     min-height: 400px;
   }
+  
 }
 </style>
 <body style="background-color:black;">
@@ -328,7 +351,7 @@ i.boticon:hover
       </div>
        </section>
 	   
-<section style="margin:0 padding:0 auto;height:95vh"  >
+<section style="margin:0 padding:0 auto;height:95vh">
         <div id="sec"></div>
 
         <div id="tile3">
@@ -355,6 +378,33 @@ i.boticon:hover
        </section>
 	   
 	   <div id="tile1-1" class="offscreen">
+	   <div id="aboutme">
+						<p class = "abt">Hi, I'm Pickledpeck<br /> <br /> 
+						I'm a digital artist and I love drawing people, so that's what I do the most.   
+						I do portraits, fanart, pin-ups, and create original characters. 
+						There's something amazing about creating people, seemingly out of thin air.</p>
+						<p class = "abt" >I currently live in Winston-Salem, North Carolina and I enjoy going to visit the coast whever I get the chance.
+						I'm currently looking to get more involved the local art scene as well.</p>
+						<p class = "abt" >I've always been enamored with two things, technology and drawing.
+						Eventually they merged into the same interest so I took up the mantle of becoming a digital artist.</p>
+						<p class = "abt" >Growing up I was a video game addict and a tech junkie which led to me getting a Computer Science degree from Chapel Hill.
+						I learned a lot during that process, but I definitely felt like I was missing something when my schedule consisted of programming all day.</p>
+						<p class = "abt" >During my last year of college I started to get more serious about working on art.
+						I've taken several painting and drawing courses, but I'm mostly a self taught artist.</p>   
+						<p class = "abt" >If you enjoy my work, consider commissioning me! 
+						I would love to make artwork for you and it allows me to create for a living.
+						<i>(You can also donate to my Ko-Fi or Patreon if you want. There are no rewards, other than my undying gratitude.)</i></p>
+						<p class = "abt" >I look forward to making more content and hope you'll join me for the ride!<br /> 
+						Expect more Speedpaints, illustrations and possibly even some streaming or tutorials in the near future.<br /> 
+						I hope you enjoy my work and I appreciate your support,<br /><br /> 
+						Thanks for dropping by! (Check out my socials below!)</p>
+						  <div>
+							<a href='https://www.deviantart.com/pickledpeck' target='_blank'><i class="fa fa-deviantart fa-lg boticon2"></i></a>
+							<a href='https://www.youtube.com/channel/UCrvs_3v0DcvgTUEdBI17-0A' target='_blank'><i class="fa fa-youtube fa-lg boticon2"></i></a>
+							<a href='https://www.instagram.com/pickledpeck' target='_blank'><i class="fa fa-instagram boticon2 fa-lg"></i></a>
+							<a href='https://www.twitter.com/pickledpeck' target='_blank'><i class="fa fa-twitter boticon2 fa-lg"></i></a>
+						  </div>
+		</div>
 	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(1.40, scrollTime('#tile1')); setTimeout(function() {animation2(1);}, scrollTime('#tile1'));">
 				<div class="arrow-top"></div>
 				<div class="arrow-bottom"></div>
@@ -471,7 +521,7 @@ i.boticon:hover
 
 							<!-- Caption text -->
 							<div class="caption-container">
-								<p id="caption"></p>
+								<p id="caption"> <p/>
 							</div>
 						</div>
 					</div>
@@ -484,8 +534,33 @@ i.boticon:hover
 	    </div>
 	   
 	   	   <div id="tile3-1" class="offscreen">
-		   
-				<img src="Images/Thumbnails/comm-sheet-thumbnail.png" style="height:80vh; position:absolute; left:83vw; top:8vh;">
+		   <div style="position: absolute; left:20vw; top:5vh; color:rgb(255,173,52); font-family:'Trebuchet MS'">
+				<h3>Commission Rules/Notes:</h3>
+				<ul style="font-size:22px; overflow-x:auto; width:60vw; height:75vh;">
+				<li>I primarily do character art, but I'm open to doing lineart or icons of most things. I do not do full landscapes or backgrounds for the lineart only tier, think single subjects.</li>
+				<li>I need specifics to draw your commission. The more I know about what you want, the faster I can make it!</li>
+				<li>I will do pin-up/Ecchi, but no uncovered nudity (nudity covered by hands or posing is fine).</li>
+				<li>Strictly no fetish work or gore.</li>
+				<li>The commission is yours and you are free to use it as you like, but I reserve the right to post it anywhere as my work promotionally or as part of a portfolio.</li>
+				<li>You pay in advance, then I do the work. I'll need your paypal email so I can send you an invoice. (I'm happy to do a small edit or two afterwards if you wish.)</li>
+				<li>I don't set a strict timeline for my work, but I'm usually fairly quick. I'll tell you if I have a long queue or if there will be a specific reason for a delay.</li>
+				<li>My prices are to the right. (please don't ask for a discount)</li>
+				<p>Send me a Deviantart note (at the button below) or email me at pickledpeck@gmail.com if you are interested!</p>
+				<a href='https://www.deviantart.com/pickledpeck' target='_blank'><i class="fa fa-deviantart fa-lg boticon2"></i></a>
+				</ul>
+			</div>
+
+
+				<img class="gallery" src="Images/Thumbnails/comm-sheet-thumbnail.png" alt="Commission Sheet" style="height:80vh; position:absolute; left:83vw; top:8vh;" onclick="openModal2()">
+				<div id="myModal2" class="modal">
+					<span class="close cursor" onclick="closeModal2()">&times;</span>
+					<div class="modal-content">
+						<img src="Images/Commissions/comm-sheet.png" style="width:100%" id="comm-sheet">
+						<div class="caption-container">
+							<p style="height:20vh;">Commission Sheet</p>
+						</div>
+					</div>
+				</div>
 		   
 	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(3.30, scrollTime('#tile3')); setTimeout(function() {animation2(3);}, scrollTime('#tile3'));">
 				<div class="arrow-top"></div>
@@ -505,10 +580,10 @@ i.boticon:hover
 	   
 <footer id="foot" class="w3-center w3-black w3-padding-64">
   <div class="w3-xlarge w3-section foot-inner">
-	<a href='https://www.deviantart.com/pickledpeck' target='_blank'><i class="fa fa-deviantart boticon"></i></a>
-	<a href='https://www.youtube.com/channel/UCrvs_3v0DcvgTUEdBI17-0A' target='_blank'><i class="fa fa-youtube boticon"></i></a>
-    <a href='https://www.instagram.com/pickledpeck' target='_blank'><i class="fa fa-instagram boticon"></i></a>
-    <a href='https://www.twitter.com/pickledpeck' target='_blank'><i class="fa fa-twitter boticon"></i></a>
+	<a href='https://www.deviantart.com/pickledpeck' target='_blank'><i class="fa fa-lg fa-deviantart boticon"></i></a>
+	<a href='https://www.youtube.com/channel/UCrvs_3v0DcvgTUEdBI17-0A' target='_blank'><i class="fa fa-lg fa-youtube boticon"></i></a>
+    <a href='https://www.instagram.com/pickledpeck' target='_blank'><i class="fa fa-lg fa-instagram boticon"></i></a>
+    <a href='https://www.twitter.com/pickledpeck' target='_blank'><i class="fa fa-lg fa-twitter boticon"></i></a>
   </div>
 
 
@@ -562,8 +637,7 @@ function lock(percent){
 	html.data('scroll-position', scrollPosition);
 	html.data('previous-overflow', html.css('overflow'));
 	html.css('overflow', 'hidden');
-	$(window).resize(function(){console.log(percent*window.innerHeight);
-	window.scrollTo(scrollPosition[0], percent*window.innerHeight);})
+	$(window).resize(function(){window.scrollTo(scrollPosition[0], percent*window.innerHeight);})
 }
 
 function unlock(){
@@ -592,29 +666,22 @@ function scrollTime(name){return Math.abs(($(name).offset().top - $(window).scro
 
 function scrollIt(num, timeout){$('html, body').animate({scrollTop: window.innerHeight*num}, timeout)}
 
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
+function openModal(){$('#myModal').css('display','block');}
+function closeModal(){$('#myModal').css('display','none');}
 
-// Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
+function openModal2(){$('#myModal2').css('display','block');}
+function closeModal2(){$('#myModal2').css('display','none');}
 
 let picturenames = ['Grandma','April Iman Pinup', 'Lye Limelight', 'Da-Ji Queen Card', 'Nidalee "Two Forms" (Speedpaint)', 'Nier 2B Pin-Up (Speedpaint)', 'The Chosen One', 'Purple', '"Oh Really" Irelia Emote', 'Four May Emotes', 'Reaching Out', 'Bellboy Character Sheet (Commission)', 'Bellboy Cart Sheet (Commission)', 'Russian Blue', 'Orange Tabby', 'Stocking Wallpaper', 'Jacksepticeye, The Android Sent By Cyberlife', 'Ayaya', 'Bunny']
 var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+function plusSlides(n) {showSlides(slideIndex += n);}
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// sets current slide
+function currentSlide(n) {showSlides(slideIndex = n);}
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
