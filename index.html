@@ -8,6 +8,53 @@
 <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="modal.css">
+
+<link rel="preload" href="Images/Gallery/grandma.png" as="image">
+<link rel="preload" href="Images/Gallery/april-iman-pinup.png" as="image">
+<link rel="preload" href="Images/Gallery/lye.png" as="image">
+<link rel="preload" href="Images/Gallery/daji-queen.png" as="image">
+<link rel="preload" href="Images/Gallery/nidalee.png" as="image">
+<link rel="preload" href="Images/Gallery/nier-pinup.png" as="image">
+<link rel="preload" href="Images/Gallery/obi-wan.png" as="image">
+<link rel="preload" href="Images/Gallery/purple.png" as="image">
+<link rel="preload" href="Images/Gallery/irelia.png" as="image">
+<link rel="preload" href="Images/Gallery/emotes.png" as="image">
+<link rel="preload" href="Images/Gallery/reach.png" as="image">
+<link rel="preload" href="Images/Gallery/bellboy.png" as="image">
+<link rel="preload" href="Images/Gallery/bellboy-cart.png" as="image">
+<link rel="preload" href="Images/Gallery/rb.png" as="image">
+<link rel="preload" href="Images/Gallery/tabby.png" as="image">
+<link rel="preload" href="Images/Gallery/stocking-wallpaper.png" as="image">
+<link rel="preload" href="Images/Gallery/jacksepticeye.png" as="image">
+<link rel="preload" href="Images/Gallery/ayaya.png" as="image">
+<link rel="preload" href="Images/Gallery/bunny.png" as="image">
+<link rel="preload" href="Images/Gallery/lye.png" as="image">
+
+<link rel="preload" href="Images/Thumbnails/grandma-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/april-iman-pinup-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/lye-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/daji-queen-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/nidalee-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/nier-pinup-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/obi-wan-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/purple-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/irelia-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/emotes-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/reach-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/bellboy-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/bellboy-cart-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/rb-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/tabby-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/stocking-wallpaper-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/jacksepticeye-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/ayaya-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/bunny-thumbnail.png" as="image">
+<link rel="preload" href="Images/Thumbnails/lye-thumbnail.png" as="image">
+
+
+
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
@@ -39,7 +86,7 @@ body, html {
     left:100vw;
     top:240vh;
     height:95vh;
-	width:100vw
+	width:100vw;
 }
 
 #tile3-1
@@ -192,6 +239,8 @@ i.boticon:hover
 	
 }
 
+.videoWrapper{position: absolute; left:17vw; top:8vh;}
+
 /* Create a Parallax Effect */
 .bgimg-1{
   background-attachment: fixed;
@@ -202,7 +251,7 @@ i.boticon:hover
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('Images/purple.png');
+  background-image: url('Images/Thumbnails/purple-thumbnail.png');
   min-height: 100%;
   background-position: center;
 }
@@ -225,11 +274,11 @@ i.boticon:hover
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a onclick="scrollIt(0, scrollTime('.bgimg-1'));" class="w3-bar-item  w3-button">HOME</a>
-    <a onclick="scrollIt(1.40, scrollTime('#tile1'))" class=" w3-bar-item w3-button w3-hide-small">ABOUT</a>
-    <a onclick="scrollIt(2.35, scrollTime('#tile2'))"  class="w3-bar-item w3-button w3-hide-small"> GALLERY</a>
-    <a onclick="scrollIt(3.30, scrollTime('#tile3'))"  class="w3-bar-item w3-button w3-hide-small"> COMMISSIONS</a>
-	<a onclick="scrollIt(4.25, scrollTime('#tile4'))"  class="w3-bar-item w3-button w3-hide-small"> SPEEDPAINTS</a>
+    <a onclick="scrollIt(0, scrollTime('.bgimg-1')); isSlid();" class="w3-bar-item  w3-button">HOME</a>
+    <a onclick="scrollIt(1.40, scrollTime('#tile1')); isSlid();" class=" w3-bar-item w3-button w3-hide-small">ABOUT</a>
+    <a onclick="scrollIt(2.35, scrollTime('#tile2')); isSlid();"  class="w3-bar-item w3-button w3-hide-small"> GALLERY</a>
+    <a onclick="scrollIt(3.30, scrollTime('#tile3')); isSlid();"  class="w3-bar-item w3-button w3-hide-small"> COMMISSIONS</a>
+	<a onclick="scrollIt(4.25, scrollTime('#tile4')); isSlid();"  class="w3-bar-item w3-button w3-hide-small"> SPEEDPAINTS</a>
   </div>
 
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -249,7 +298,7 @@ i.boticon:hover
 
 <div>
 	<div id="cap">
-		<img style = "position:relative; top:7vh; height:30vh;" src="Images/may.png">
+		<img style = "position:relative; top:7vh; height:30vh;" src="Images/Thumbnails/may-thumbnail.png">
 		<h1 id="header-text">Hello There!</h1>
 	</div>
 
@@ -258,7 +307,7 @@ i.boticon:hover
         <div id="sec"></div>
 
         <div id="tile1">
-			<img src="Images/lye.png" style="height:95vh;"/>
+			<img src="Images/Thumbnails/lye-thumbnail.png" style="height:95vh;"/>
 			<h1 id="header-text-2">About Me</h1>
 			<div class="arrow" style="left:90vw;" onclick="scrollIt(1.40, scrollTime('#tile1')); setTimeout(function() {animation(1);}, scrollTime('#tile1'));">
 				<div class="arrow-top"></div>
@@ -270,7 +319,7 @@ i.boticon:hover
         <div id="sec"></div>
 
         <div id="tile2">
-            <img src="Images/ayaya.png" style="height:95vh;"/>
+            <img src="Images/Thumbnails/ayaya-thumbnail.png" style="height:95vh;"/>
 			<h1 id="header-text-2">Gallery</h1>
 			<div class="arrow" style="left:90vw;" onclick="scrollIt(2.35, scrollTime('#tile2')); setTimeout(function() {animation(2);}, scrollTime('#tile2'));">
 				<div class="arrow-top"></div>
@@ -283,7 +332,7 @@ i.boticon:hover
         <div id="sec"></div>
 
         <div id="tile3">
-			<img src="Images/reach.png" style="height:95vh;"/>
+			<img src="Images/Thumbnails/reach-thumbnail.png" style="height:95vh;"/>
 			<h1 id="header-text-2">Commissions</h1>
 			<div class="arrow" style="left:90vw;" onclick="scrollIt(3.30, scrollTime('#tile3')); setTimeout(function() {animation(3);}, scrollTime('#tile3'));">
 				<div class="arrow-top"></div>
@@ -296,7 +345,7 @@ i.boticon:hover
         <div id="sec"></div>
 
         <div id="tile4">
-            <img src="Images/nidaleedaily.png" style="height:95vh;"/>
+            <img src="Images/Thumbnails/nidalee-thumbnail.png" style="height:95vh;"/>
 			<h1 id="header-text-2">Speedpaints</h1>
 			<div class="arrow" style="left:90vw;" onclick="scrollIt(4.25, scrollTime('#tile4')); setTimeout(function() {animation(4);}, scrollTime('#tile4'));">
 				<div class="arrow-top"></div>
@@ -311,24 +360,144 @@ i.boticon:hover
 				<div class="arrow-bottom"></div>
 			</div>
 	   </div>
-
 	   
 	   <div id="tile2-1" class="offscreen">
-	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(2.35, scrollTime('#tile2')); setTimeout(function() {animation2(2);}, scrollTime('#tile2'));"">
+				<div class="container">
+						<img id='image1' class = "gallery"onclick="openModal(); currentSlide(1)" src="Images/Thumbnails/grandma-thumbnail.png"></img>
+						<img id='image2' class = "gallery"onclick="openModal(); currentSlide(2)" src="Images/Thumbnails/april-iman-pinup-thumbnail.png"></img>
+						<img id='image3' class = "gallery"onclick="openModal(); currentSlide(3)" src="Images/Thumbnails/lye-thumbnail.png"></img>
+						<img id='image4' class = "gallery"onclick="openModal(); currentSlide(4)" src="Images/Thumbnails/daji-queen-thumbnail.png"></img>
+						<img id='image5' class = "gallery"onclick="openModal(); currentSlide(5)"  src="Images/Thumbnails/nidalee-thumbnail.png"></img>
+						<img id='image6' class = "gallery"onclick="openModal(); currentSlide(6)"  src="Images/Thumbnails/nier-pinup-thumbnail.png"></img>
+						<img id='image7' class = "gallery"onclick="openModal(); currentSlide(7)"  src="Images/Thumbnails/obi-wan-thumbnail.png"></img>
+						<img id='image8' class = "gallery"onclick="openModal(); currentSlide(8)"  src="Images/Thumbnails/purple-thumbnail.png"></img>
+						<img id='image9' class = "gallery"onclick="openModal(); currentSlide(9)"  src="Images/Thumbnails/irelia-thumbnail.png"></img>
+						<img id='image10' class = "gallery"onclick="openModal(); currentSlide(10)"  src="Images/Thumbnails/emotes-thumbnail.png"></img>
+						<img id='image11' class = "gallery"onclick="openModal(); currentSlide(11)"  src="Images/Thumbnails/reach-thumbnail.png"></img>
+						<img id='image12' class = "gallery"onclick="openModal(); currentSlide(12)"  src="Images/Thumbnails/bellboy-thumbnail.png"></img>
+						<img id='image13' class = "gallery"onclick="openModal(); currentSlide(13)"  src="Images/Thumbnails/bellboy-cart-thumbnail.png"></img>
+						<img id='image14' class = "gallery"onclick="openModal(); currentSlide(14)"  src="Images/Thumbnails/rb-thumbnail.png"></img>
+						<img id='image15' class = "gallery"onclick="openModal(); currentSlide(15)"  src="Images/Thumbnails/tabby-thumbnail.png"></img>
+						<img id='image16' class = "gallery"onclick="openModal(); currentSlide(16)"  src="Images/Thumbnails/stocking-wallpaper-thumbnail.png"></img>
+						<img id='image17' class = "gallery"onclick="openModal(); currentSlide(17)"  src="Images/Thumbnails/jacksepticeye-thumbnail.png"></img>
+						<img id='image18' class = "gallery"onclick="openModal(); currentSlide(18)"  src="Images/Thumbnails/ayaya-thumbnail.png"></img>
+						<img id='image19' class = "gallery"onclick="openModal(); currentSlide(19)"  src="Images/Thumbnails/bunny-thumbnail.png"></img>
+					</div>
+					
+				<!-- The Modal/Lightbox -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+
+							<div class="mySlides">
+								<img src="Images/Gallery/grandma.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/april-iman-pinup.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/lye.png" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="Images/Gallery/daji-queen.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/nidalee.png" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="Images/Gallery/nier-pinup.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/obi-wan.png" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="Images/Gallery/purple.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/irelia.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/emotes.png" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="Images/Gallery/reach.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/bellboy.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/bellboy-cart.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/rb.png" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="Images/Gallery/tabby.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/stocking-wallpaper.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/jacksepticeye.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<img src="Images/Gallery/ayaya.png" style="width:100%">
+							</div>
+							
+							<div class="mySlides">
+								<img src="Images/Gallery/bunny.png" style="width:100%">
+							</div>
+
+							<!-- Next/previous controls -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							<!-- Caption text -->
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
+						</div>
+					</div>
+				
+	   		<div class="arrow" style="left:10vw;" onclick="scrollIt(2.35, scrollTime('#tile2')); setTimeout(function() {animation2(2);}, scrollTime('#tile2'));">
 				<div class="arrow-top"></div>
-				<div class="arrow-bottom"></div>
+				<div class="arrow-bottom"></div>	
 			</div>
-	   </div>
+		
+	    </div>
 	   
 	   	   <div id="tile3-1" class="offscreen">
-	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(3.30, scrollTime('#tile3')); setTimeout(function() {animation2(3);}, scrollTime('#tile3'));"">
+		   
+				<img src="Images/Thumbnails/comm-sheet-thumbnail.png" style="height:80vh; position:absolute; left:83vw; top:8vh;">
+		   
+	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(3.30, scrollTime('#tile3')); setTimeout(function() {animation2(3);}, scrollTime('#tile3'));">
 				<div class="arrow-top"></div>
 				<div class="arrow-bottom"></div>
 			</div>
 	   </div>
 	   
 	   	   <div id="tile4-1" class="offscreen">
-	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(4.25, scrollTime('#tile4')); setTimeout(function() {animation2(4);}, scrollTime('#tile4'));"">
+				<div class="videoWrapper">
+				<iframe class = "videoplayer" style="width:80vw;height:80vh;" src="https://www.youtube.com/embed/uOj8VDnXlt8?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+	   			<div class="arrow" style="left:10vw;" onclick="scrollIt(4.25, scrollTime('#tile4')); setTimeout(function() {animation2(4);}, scrollTime('#tile4'));">
 				<div class="arrow-top"></div>
 				<div class="arrow-bottom"></div>
 			</div>
@@ -348,14 +517,27 @@ i.boticon:hover
 
 function animation(tileNum) {
 var $tile = $('#tile' + tileNum + "-1");
-$tile.addClass("animating");
-$tile.animate({left: $('#tile' + tileNum).offset().left}, 1000, function(){$tile.removeClass("offscreen"); $tile.removeClass("animating");});
+$tile.addClass('isSlid'); 
+lock();
+$tile.animate({left: $('#tile' + tileNum).offset().left}, 1000);
 }
 
 function animation2(tileNum) {
 var $tile = $('#tile' + tileNum + "-1");
-$tile.addClass("animating");
-$tile.animate({left: '100vw'}, 1000,function(){$tile.addClass("offscreen"); $tile.removeClass("animating");})}
+unlock();
+$tile.animate({left: '100vw'}, 1000,function(){});
+if(tileNum == 4) {$('.videoplayer')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');}}
+
+function isSlid(){
+var $one = $('#tile1-1');
+var $two = $('#tile2-1');
+var $three = $('#tile3-1');
+var $four = $('#tile4-1');
+if($one.hasClass('isSlid')){animation2(1); $one.removeClass('isSlid');}
+if($two.hasClass('isSlid')){animation2(2); $two.removeClass('isSlid');}
+if($three.hasClass('isSlid')){animation2(3); $three.removeClass('isSlid');}
+if($four.hasClass('isSlid')){animation2(4); $four.removeClass('isSlid');}
+}
 
 function tileSlider(tileNum, name) 
 {
@@ -369,22 +551,31 @@ function tileSlider(tileNum, name)
 			var converter = window.innerWidth/window.innerHeight; 
 			var sideLocation = sliderSpot * converter;
 			
-			if($tile.hasClass("animating")){}
-			else if($tile.hasClass("offscreen")){$tile.css({'left': '100vw'});}
-			else if (tileNum%2 == 0){$tile.css({'left': -sideLocation});}
+			if (tileNum%2 == 0){$tile.css({'left': -sideLocation});}
 			else{$tile.css({'left': sideLocation});}
 		});
+}
+
+function lock(){
+	var scrollPosition = [self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft, self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop];
+	var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+	html.data('scroll-position', scrollPosition);
+	html.data('previous-overflow', html.css('overflow'));
+	html.css('overflow', 'hidden');
+	window.scrollTo(scrollPosition[0], scrollPosition[1]);
+}
+
+function unlock(){
+	var html = jQuery('html');
+	var scrollPosition = html.data('scroll-position');
+	html.css('overflow', html.data('previous-overflow'));
+	window.scrollTo(scrollPosition[0], scrollPosition[1])
 }
 
 tileSlider(1, '1');
 tileSlider(2, '2');
 tileSlider(3, '3');
 tileSlider(4, '4');
-
-tileSlider(1, '1-1');
-tileSlider(2, '2-1');
-tileSlider(3, '3-1');
-tileSlider(4, '4-1');
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
@@ -399,6 +590,40 @@ function toggleFunction() {
 function scrollTime(name){return Math.abs(($(name).offset().top - $(window).scrollTop()))*(500/window.innerHeight)}
 
 function scrollIt(num, timeout){$('html, body').animate({scrollTop: window.innerHeight*num}, timeout)}
+
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+let picturenames = ['Grandma','April Iman Pinup', 'Lye Limelight', 'Da-Ji Queen Card', 'Nidalee "Two Forms" (Speedpaint)', 'Nier 2B Pin-Up (Speedpaint)', 'The Chosen One', 'Purple', '"Oh Really" Irelia Emote', 'Four May Emotes', 'Reaching Out', 'Bellboy Character Sheet (Commission)', 'Bellboy Cart Sheet (Commission)', 'Russian Blue', 'Orange Tabby', 'Stocking Wallpaper', 'Jacksepticeye, The Android Sent By Cyberlife', 'Ayaya', 'Bunny']
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";}
+  slides[slideIndex-1].style.display = "block";
+  captionText.innerHTML = picturenames[slideIndex -1];}
+
 </script>
 
 </body>
