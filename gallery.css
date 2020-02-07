@@ -1,0 +1,26 @@
+.container > img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+	width: 100%;
+	max-height: 100%;
+}
+
+.container {
+    display: grid;
+	grid-template: repeat(50, 15vw) / repeat(4, 15vw);
+    grid-gap: 20px;
+	position:absolute; 
+	top:5vh; bottom:90vh; 
+	left:20vw; right:100vw; 
+	width:80vw; Height:85vh;
+	align-items: center;
+	overflow-x:auto;
+}
+
+#caption {
+	font-family: 'Advent Pro';
+	font-style: bold;
+	font-size: 25px;
+}
