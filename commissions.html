@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pickledpeck - Digital Portrait and Character Artist</title>
+<meta name="description" content="Hi, I'm Pickledpeck, I'm a digital artist and I love drawing people. I do portraits, fanart, pin-ups, and create original characters." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="modalComm.css">
+<link rel="stylesheet" href="animate.css-master/animate.css">
+  
+ <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="preload" href="Images/Thumbnails/comm-sheet-thumbnail.png" as="image">
+<link rel="preload" href="Images/Commissions/comm-sheet.png" as="image">
+
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color:black; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+i.boticon2:hover 
+{
+  color: white;
+}
+
+#nav{height: 50px;}
+
+#foot
+{
+	height: 50px;
+	width: 100vw;
+	display: flex;
+    align-items: center;
+	z-index: -1;
+}
+
+.foot-inner
+{
+	margin: 0 auto;
+}
+
+.w3-bar-item
+{
+	padding: 8px 16px;
+	float: left;
+	width: auto;
+	border: none;
+	display: block;
+	outline: 0;
+	color: white;
+}
+
+#commissions
+{
+	font-family: 'Trebuchet MS';
+	position: absolute;
+	left: 20vw;
+	width:80vw;
+	color:rgb(255,173,52);
+	margin-top:5vh;
+}
+
+.w3-button:hover{color:#000!important;background-color:rgb(255,173,52)!important}
+
+li{margin-right: 5vw;}
+p{margin-right: 5vw;}
+
+</style>
+<body style="overflow:hidden;">
+
+	<div id="nav" class="w3-top">
+		<div class="w3-bar w3-black" id="myNavbar">
+		  <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+			<i class="fa fa-bars"></i>
+		  </a>
+		  <a href="index.html" class="w3-bar-item  w3-button">HOME</a>
+		  <a href="about.html" class="w3-bar-item  w3-button">ABOUT</a>
+		  <a href="prints.html" class="w3-bar-item  w3-button"> PRINTS</a>
+		  <a  class=" w3-bar-item w3-button">COMMISSIONS</a>
+		</div>
+	  </div>
+
+	<div class=" animated fadeInRight slower" style="background-image: linear-gradient(to top, darkslategray, 10%, grey); height:100vh; width:100vw; position:fixed; overflow:hidden;">
+	   <div id="commissions">
+
+			<h3>Commission Rules/Notes:</h3>
+			<ul style="font-size:22px; overflow-y:auto; height:75vh; width:60vw;">
+			<li>I primarily do character art, but I'm open to doing lineart or icons of most things. I do not do full landscapes or backgrounds for the lineart only tier, think single subjects.</li>
+			<li>I need specifics to draw your commission. The more I know about what you want, the faster I can make it!</li>
+			<li>I will do pin-up/Ecchi, but no uncovered nudity (nudity covered by hands or posing is fine).</li>
+			<li>Strictly no fetish work or gore.</li>
+			<li>The commission is yours and you are free to use it as you like, but I reserve the right to post it anywhere as my work promotionally or as part of a portfolio.</li>
+			<li>You pay in advance, then I do the work. I'll need your paypal email so I can send you an invoice. (I'm happy to do a small edit or two afterwards if you wish.)</li>
+			<li>I don't set a strict timeline for my work, but I'm usually fairly quick. I'll tell you if I have a long queue or if there will be a specific reason for a delay.</li>
+			<li>My prices are to the right. (please don't ask for a discount)</li>
+			<p>Send me a Deviantart note (at the button below) or email me at pickledpeck@gmail.com if you are interested!</p>
+			<a href='https://www.deviantart.com/pickledpeck' target='_blank'><i class="fa fa-deviantart fa-lg boticon2"></i></a>
+			</ul>
+		</div>
+
+		<img id="comm-sheet" onclick="imgOnClick();" src="Images/Thumbnails/comm-sheet-thumbnail.png" alt="Commission Sheet" style="width:10vw; position:fixed; left:83vw; top:50%; transform: translate(0, -50%);">
+		</div>
+
+		<div id="myModal" class="modal">
+
+			<!-- The Close Button -->
+			<span class="close">&times;</span>
+		  
+			<!-- Modal Content (The Image) -->
+			<img class="modal-content" id="img01">
+		  
+			<!-- Modal Caption (Image Text) -->
+			<div id="caption"></div>
+		  </div>
+
+		<div  class="animated fadeInRight slower">
+	   			<a class="arrow" style="left:10vw;top: 50vh;" href="/index.html">
+				<div class="arrow-top"></div>
+				<div class="arrow-bottom"></div>
+				   </a>
+		</div>
+		</div>
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+
+var modal = $("#myModal");
+var img = $("#comm-sheet");
+var modalImg = $("#img01");
+var captionText = $("#caption");
+var span = $(".close")[0];
+
+function imgOnClick(){
+  	modal.css("display", "block");
+	modalImg.attr("src", "Images/Commissions/comm-sheet.png") 
+  	captionText.html("Commission Sheet")
+}
+
+span.onclick = function() {modal.css("display", "none");}
+</script>
+
