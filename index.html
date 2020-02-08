@@ -190,14 +190,14 @@ i.boticon:hover
   </div>
 </div>
 
-<div class="bgimg-1 animated fadeInLeft slower" id="home">
+<div class="bgimg-1 animated fadeInLeft" id="home">
   <div id="title">
     <span class="w3-center w3-padding-large w3-xlarge w3-wide">
 	Pickledpeck
   </div>
 </div>
 
-<div class="animated fadeInLeftBig slower">
+<div class="animated fadeInLeftBig">
 
 <div id="cap">
 	<img id="capimg" src="Images/Thumbnails/may-thumbnail.png">
@@ -205,7 +205,7 @@ i.boticon:hover
 </div>
 
 
-<div id="tile1">
+<div id="tile1" class="animated>
 	<img id="t1img" src="Images/Thumbnails/lye-thumbnail.png">
 		<h1 class="header-text-2">About Me</h1>
 		<a class="arrow" style="left:90vw;" href="/about.html">
@@ -214,7 +214,7 @@ i.boticon:hover
 		</a>
 </div>
 
-        <div id="tile2">
+        <div id="tile2" class="animated>
             <img id="t2img" src="Images/Thumbnails/ayaya-thumbnail.png">
 			<h1 class="header-text-2">Print Shop</h1>
 			<a class="arrow" style="left:90vw;" href="/prints.html">
@@ -223,7 +223,7 @@ i.boticon:hover
 			</a>
       </div>
 	   
-        <div id="tile3">
+        <div id="tile3" class="animated>
 			<img id="t3img" src="Images/Thumbnails/reach-thumbnail.png">
 			<h1 class="header-text-2">Commissions</h1>
 			<a class="arrow" style="left:90%" href="/commissions.html">
@@ -266,7 +266,7 @@ $(window).scroll(function () {
 });
 
 function toggleFunction() {
-    if(!$ham.hasClass('slideInDown')){$ham.css("visibility","visible");$ham.addClass('slideInDown'); $ham.removeClass('slideOutUp');}
+    if(!$ham.hasClass('slideInDown')){$ham.css('visibility', 'visible');  $ham.addClass('slideInDown'); $ham.removeClass('slideOutUp');}
     else{$ham.addClass('slideOutUp'); $ham.removeClass('slideInDown');}
 }
 
