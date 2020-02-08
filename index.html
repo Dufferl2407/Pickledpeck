@@ -242,10 +242,35 @@ i.boticon:hover
   </footer>
   </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 
-var dev = .5 * Math.min(window.innerHeight, window.innerWidth);
+var dev = Math.min(window.innerHeight, window.innerWidth);
+$(window).resize(function (){dev = Math.min(window.innerHeight, window.innerWidth)});
+
+var $tile1 = $('#tile1');
+var $tile2 = $('#tile2');
+var $tile3 = $('#tile3');
+var $ham = $('#ham');
+
+
+
+$(window).scroll(function () {
+
+	var scroll = $(this).scrollTop();
+    var converter = window.innerWidth/window.innerHeight; 
+	if(.5*dev - scroll < 0){$tile1.removeClass('slideOutLeft'); $tile1.addClass('slideInLeft');}else{$tile1.removeClass('slideInLeft');$tile1.addClass('slideOutLeft');}
+	if(1*dev - scroll < 0){$tile2.removeClass('slideOutRight'); $tile2.addClass('slideInRight');}else{$tile2.removeClass('slideInRight');$tile2.addClass('slideOutRight');}
+	if(1.5*dev - scroll < 0){$tile3.removeClass('slideOutLeft'); $tile3.addClass('slideInLeft');}else{$tile3.removeClass('slideInLeft');$tile3.addClass('slideOutLeft');}
+       
+});
+
+function toggleFunction() {
+    if(!$ham.hasClass('slideInDown')){$ham.css("visibility","visible");$ham.addClass('slideInDown'); $ham.removeClass('slideOutUp');}
+    else{$ham.addClass('slideOutUp'); $ham.removeClass('slideInDown');}
+}
+
+/*var dev = .5 * Math.min(window.innerHeight, window.innerWidth);
 $(window).resize(function (){dev = .5 * Math.min(window.innerHeight, window.innerWidth)});
 
 function tileSlider(tileNum, name) 
@@ -266,7 +291,7 @@ function tileSlider(tileNum, name)
 
 tileSlider(1, '1');
 tileSlider(2, '2');
-tileSlider(3, '3');
+tileSlider(3, '3');*/
 </script>
 
 </body>
